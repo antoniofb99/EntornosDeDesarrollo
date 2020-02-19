@@ -74,9 +74,19 @@ $Form2.Controls.Add($ButtonTienda1)
 $buttonTienda1.add_Click{
 $Form = New-Object System.Windows.Forms.Form
 $Label = New-Object System.Windows.Forms.Label
+$img = [System.Drawing.Image]::Fromfile('C:\Users\anton\OneDrive\Escritorio\funda.jpg')
+$pictureBox = new-object Windows.Forms.PictureBox
+$pictureBox.Width = $img.Size.Width
+$pictureBox.Height = $img.Size.Height
+$pictureBox.Image = $img
+
+$Label.Text = "imagen"
+$Label.AutoSize = $True
+$form.controls.add($pictureBox)
 $Label.Text = "APPLE"
 $Label.AutoSize = $True
 $Form.Controls.Add($Label)
+
 
 
 $Form.ShowDialog()
@@ -93,6 +103,15 @@ $Form2.Controls.Add($ButtonTienda2)
 $buttonTienda2.add_Click{
 $Form = New-Object System.Windows.Forms.Form
 $Label = New-Object System.Windows.Forms.Label
+$img = [System.Drawing.Image]::Fromfile('C:\Users\anton\OneDrive\Escritorio\cargador.jpg')
+$pictureBox = new-object Windows.Forms.PictureBox
+$pictureBox.Width = $img.Size.Width
+$pictureBox.Height = $img.Size.Height
+$pictureBox.Image = $img
+
+$Label.Text = "imagen"
+$Label.AutoSize = $True
+$form.controls.add($pictureBox)
 $Label.Text = "CARGADORES 100% ORIGINALES"
 $Label.AutoSize = $True
 $Form.Controls.Add($Label)
